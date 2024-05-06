@@ -116,3 +116,32 @@ We were able to modify our code to loop through each word in the tweet, take the
 <img width="335" alt="cosine_sim" src="https://github.com/daisy-abbott/networkelection/assets/112681549/0de07939-5a7a-4808-be20-92f11b9324a7">
 
 In the future, we’d like to explore how the model would perform, but since at this point, we already had enough data, we decided to proceed with our original plan. 
+
+
+# Results: 
+* Training and Validation Accuracy
+<img width="608" alt="trainingAccuracy" src="https://github.com/daisy-abbott/networkelection/assets/112681549/5e5bd026-bfb6-4567-9be2-0dfd7099a26d">
+
+* Training and Validation Loss
+<img width="1382" alt="trainingLoss" src="https://github.com/daisy-abbott/networkelection/assets/112681549/e28cff66-4248-4a61-9415-25ade3e47d7c">
+
+* Classification Report
+![classificationreport](https://github.com/daisy-abbott/networkelection/assets/112681549/0dcf66d6-2fd8-45f9-8856-6ea18a52d1ee)
+
+
+
+The classification report demonstrates that the model is predicting both candidates very accurately, with 0 being Biden and 1 being Trump. However, the f1-score for classifying pro-Biden tweets is lower than pro-Trump tweets (especially when looking at recall). This is most likely because two thirds of the training data was pro-Trump tweets, the other third being pro-Biden. This bias is reflected in the model, making it more likely to predict a tweet as pro-Trump. 
+
+* Confusion Matrix
+![confusionmatrix](https://github.com/daisy-abbott/networkelection/assets/112681549/c4f26238-d2e2-432f-9fac-eb6d482a015c)
+
+* Distribution of predictions on abortion
+<img width="250" alt="dist_abortion" src="https://github.com/daisy-abbott/networkelection/assets/112681549/7369e2db-3524-46b9-b312-473e74a21df7">
+
+* Distribution of predictions on immigration
+<img width="257" alt="dist_immigration" src="https://github.com/daisy-abbott/networkelection/assets/112681549/5f55af6e-8803-42c9-8e09-210635bb6bdc">
+
+* Distribution of predictions on gun control
+<img width="293" alt="dist_guncontrol" src="https://github.com/daisy-abbott/networkelection/assets/112681549/31ef0899-a93c-4717-81eb-ab6e149ff926">
+
+According to this confusion matrix, the model is making the most incorrect predictions when it is actually pro-Biden, but it confuses it as pro-Trump. Like we mentioned before, this is because of the imbalance in the training data, which contained more pro-Trump data. 
