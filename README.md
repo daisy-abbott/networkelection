@@ -207,13 +207,13 @@ We initially wanted to use the topics as an extra feature to train the model on,
 
 # Conclusion
 
-Our project aimed to explore sentiment analysis on Twitter data regarding the 2020 US election. Through our methodology, we attempted to address the shortcomings of traditional polling methods by leveraging machine learning techniques. While our model demonstrated high accuracy during training, it faced challenges in accurately predicting sentiment on a larger scale, particularly regarding key issues like abortion, immigration, and gun control when run on the entire dataset.
+Our project aimed to explore sentiment analysis on Twitter data regarding the 2020 US election. We attempted to address the shortcomings of traditional polling methods by leveraging machine learning techniques. While our model demonstrated high accuracy during training, it faced challenges in accurately predicting sentiment on a larger scale, particularly regarding immigration and gun control when run on the entire dataset.
 
 
-Although we preprocessed the data to the best of our abilities, we still had imbalances in the training data which lead to the model having a bias towards predicting trump. Additionally, because of  the binary predictions combined with the complexity of politically charged tweets, the model struggled to generalize accurately. We believe this is due to the fact that we didn’t fully preprocess our data by removing pro biden/pro trump sentiment in the opposing file. Furthermore, the use of Vader sentiment analysis, while informative, lacked the nuance required for comprehensive political sentiment analysis. The way we preprocessed the data and text also made the model very accurate on the test data, but did not generalize well to the entire dataset.
-
-
-Moving forward, we could improve our project by addressing some of these limitations such as enhancing data preprocessing techniques, incorporating more nuanced sentiment analysis methods, and exploring alternative machine learning architectures. 
+Although we preprocessed the data to the best of our abilities, we still had imbalances in the training data which lead to the model having a bias towards predicting trump. Additionally, because of the binary predictions combined with the complexity of politically charged tweets, the model struggled to generalize accurately to the entire dataset. We believe this is due to the fact that we didn’t fully preprocess our data by including pro biden/pro trump sentiment from both csv files. Furthermore, the use of Vader sentiment analysis, while informative, lacked the nuance required for comprehensive political sentiment analysis. 
 
 
 Overall, while our project touches on the potential of machine learning in social media for political sentiment analysis, there definitely needs to be further refinement and exploration to accurately capture the complexities of public opinion in the digital age.
+
+
+## References: 
