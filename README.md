@@ -147,11 +147,20 @@ This confusion matrix shows the actual and predicted values for Trump and Biden.
 
 * Figur 5: 
 Distribution of predictions on abortion
+
 <img width="250" alt="dist_abortion" src="https://github.com/daisy-abbott/networkelection/assets/112681549/7369e2db-3524-46b9-b312-473e74a21df7">
+
+
 Distribution of predictions on immigration
+
 <img width="257" alt="dist_immigration" src="https://github.com/daisy-abbott/networkelection/assets/112681549/5f55af6e-8803-42c9-8e09-210635bb6bdc">
+
+
 Distribution of predictions on gun control
 <img width="293" alt="dist_guncontrol" src="https://github.com/daisy-abbott/networkelection/assets/112681549/31ef0899-a93c-4717-81eb-ab6e149ff926">
+
+
+
 After running our model on the larger dataset, inputting the tweet text and vader score to predict the candidate, the model gave us predictions that are difficult to interpret. As you can see from the distribution of prediction scores, they only range from 0.24 to 0.45 for all three topics, seemingly only predicting all of the tweets as closer to Biden. 
 
 
@@ -163,6 +172,8 @@ After running our model on the larger dataset, inputting the tweet text and vade
 
 * Figure 7: Topic and Vader Score
 <img width="605" alt="vadertopicacc" src="https://github.com/daisy-abbott/networkelection/assets/112681549/715149aa-4198-4905-a746-abba9312d8f1">
+
+
 These are the results from an additional model that we attempted to train using only vader score and the topic as features to predict the candidate. 
 
 
