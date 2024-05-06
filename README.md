@@ -216,7 +216,8 @@ Although we preprocessed the data to the best of our abilities, we still had imb
 Overall, while our project touches on the potential of machine learning in social media for political sentiment analysis, there definitely needs to be further refinement and exploration to accurately capture the complexities of public opinion in the digital age.
 
 
-## References: 
+## References and Related Work
+Since there has not been extensive research into political sentiment analysis using data from twitter, we attempted to fill this gap by analyzing data from the 2020 US election. Our model was inspired by past work in this field (see Gierlach in references), we tried to take a different approach with using vader scores as a feature in our model along with the tweet itself. While our results cannot be taken as accurate and informative, it provides valuable insights into the field of political sentiment analysis and how to better go about a project like this in the future. Additionally, because there is essentially zero labeled political twitter data, our project provides one approach to how political data from twitter can be labeled. 	
 
 * https://python.plainenglish.io/how-to-extract-tweets-on-a-hashtag-from-twitter-api-using-tweepy-34d697ecba21
 https://www.pewresearch.org/short-reads/2022/09/21/does-public-opinion-polling-about-issues-still-work/
