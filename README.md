@@ -81,7 +81,8 @@ One goal coming out of this project was to visualize a poll on the nation regard
 
 The much larger dataset consisted of a less filtered version of our original dataset. We still preprocessed our data, but instead of filtering by sentiment of hashtag (pro-biden vs pro-trump), we filtered by topic of contention.
 
-<img width="900" alt="topictolabel" src="Graphs/topictolabel.png">
+<img width="609" alt="topictolabel" src="https://github.com/daisy-abbott/networkelection/assets/112681549/650b50dc-21bc-436e-ae39-265a0d8428f1">
+
 
 
 We originally had an issue getting enough data, and started to pivot to using cosine similarity between keywords in our tweets which we will get into later, but ultimately decided to use this mapping, as it gave us enough data. The reason this ended up giving us enough data was because we expanded our dictionary to include capitalization, hyphens, and more related keywords.
@@ -90,7 +91,7 @@ We then loaded  the tweets in each file by chunks, and filtered the data so that
 
 Next, we ran vader on the tweet texts to obtain a sentiment score for each tweet. We then merged the biden and trump dataframes into one dataframe and ended up with the following amounts of data per topic per candidate: 
 
-<img width="700" alt="topictolabel" src="Graphs/testdata.png">
+<img width="359" alt="testdata" src="https://github.com/daisy-abbott/networkelection/assets/112681549/427b46dd-caa3-4b4e-ad13-b9928817be7c">
 
 As you can see, we have ```25,000``` tweets from the ```Biden``` file and ```15,000``` tweets from the ```trump``` file. ```21,000``` tweets related to ```Gun Control``` (13,000 from the biden file, 7,000 from the trump file), ```16,000``` tweets related to ```immigration``` (10,000 from biden and 6,000 from trump), and ```4,000``` tweets related to abortion (2400 from biden and 1400 from trump). 
 
@@ -104,7 +105,7 @@ At the very beginning of the data preprocessing, we were filtering our data by b
 We used the ```word2vec-google-news-300``` which was listed as one of the top five embedding models and was trained on news related text, so we figured that this would be perfect for our purposes. 
 
 
-<img width="700" alt="topictolabel" src="Graphs/describe.png">
+<img width="346" alt="describe" src="https://github.com/daisy-abbott/networkelection/assets/112681549/4ef7a4bc-74c6-44d7-be24-eba993803d48">
 
 Unfortunately, as you can see from the describe(), there is almost no similarity at all between the vectors. Because this did not prove to be useful, we changed our direction to what we talked about earlier: Training a model on filtered text by hashtag and sentiment score to predict a candidate, and then loading the pretrained model, and feeding the filtering the data solely by topic, and feeding that into the model. 
 
@@ -112,7 +113,6 @@ We did further investigation as to why the cosine similarity scores were so low,
 
 We were able to modify our code to loop through each word in the tweet, take the word with the highest cosine similarity, and save that as the score for the entire tweet. This did work and we got incredibly high scores that were relevant and fit with our data. 
 
-<img width="700" alt="topictolabel" src="Graphs/cosine_sim.png">
-
+<img width="335" alt="cosine_sim" src="https://github.com/daisy-abbott/networkelection/assets/112681549/0de07939-5a7a-4808-be20-92f11b9324a7">
 
 In the future, we’d like to explore how the model would perform, but since at this point, we already had enough data, we decided to proceed with our original plan. 
