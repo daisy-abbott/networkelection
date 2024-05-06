@@ -157,6 +157,7 @@ Distribution of predictions on immigration
 
 
 Distribution of predictions on gun control
+
 <img width="293" alt="dist_guncontrol" src="https://github.com/daisy-abbott/networkelection/assets/112681549/31ef0899-a93c-4717-81eb-ab6e149ff926">
 
 
