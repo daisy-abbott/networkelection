@@ -123,7 +123,7 @@ In the future, we’d like to explore how the model would perform, but since at 
 <img width="608" alt="trainingAccuracy" src="https://github.com/daisy-abbott/networkelection/assets/112681549/5e5bd026-bfb6-4567-9be2-0dfd7099a26d">
 
 * Training and Validation Loss
-<img width="1382" alt="trainingLoss" src="https://github.com/daisy-abbott/networkelection/assets/112681549/e28cff66-4248-4a61-9415-25ade3e47d7c">
+<img width="608" alt="trainingLoss" src="https://github.com/daisy-abbott/networkelection/assets/112681549/e28cff66-4248-4a61-9415-25ade3e47d7c">
 
 * Classification Report
 ![classificationreport](https://github.com/daisy-abbott/networkelection/assets/112681549/0dcf66d6-2fd8-45f9-8856-6ea18a52d1ee)
@@ -133,15 +133,37 @@ In the future, we’d like to explore how the model would perform, but since at 
 The classification report demonstrates that the model is predicting both candidates very accurately, with 0 being Biden and 1 being Trump. However, the f1-score for classifying pro-Biden tweets is lower than pro-Trump tweets (especially when looking at recall). This is most likely because two thirds of the training data was pro-Trump tweets, the other third being pro-Biden. This bias is reflected in the model, making it more likely to predict a tweet as pro-Trump. 
 
 * Confusion Matrix
+
+
 ![confusionmatrix](https://github.com/daisy-abbott/networkelection/assets/112681549/c4f26238-d2e2-432f-9fac-eb6d482a015c)
 
+According to this confusion matrix, the model is making the most incorrect predictions when it is actually pro-Biden, but it confuses it as pro-Trump. Like we mentioned before, this is because of the imbalance in the training data, which contained more pro-Trump data. 
+
+
+
 * Distribution of predictions on abortion
+
+
 <img width="250" alt="dist_abortion" src="https://github.com/daisy-abbott/networkelection/assets/112681549/7369e2db-3524-46b9-b312-473e74a21df7">
 
 * Distribution of predictions on immigration
+
+
 <img width="257" alt="dist_immigration" src="https://github.com/daisy-abbott/networkelection/assets/112681549/5f55af6e-8803-42c9-8e09-210635bb6bdc">
 
 * Distribution of predictions on gun control
+
+
 <img width="293" alt="dist_guncontrol" src="https://github.com/daisy-abbott/networkelection/assets/112681549/31ef0899-a93c-4717-81eb-ab6e149ff926">
 
-According to this confusion matrix, the model is making the most incorrect predictions when it is actually pro-Biden, but it confuses it as pro-Trump. Like we mentioned before, this is because of the imbalance in the training data, which contained more pro-Trump data. 
+
+After running our model on the larger dataset, inputting the tweet text and vader score to predict the candidate, the model gave us predictions that are difficult to interpret. As you can see from the distribution of prediction scores, they only range from 0.24 to 0.45 for all three topics, seemingly only predicting all of the tweets as closer to Biden. 
+
+
+We are not completely sure as to why the predictions came out this way, so we looked at the tweets with the highest and lowest prediction scores to see if it was able to separate pro-Biden and pro-Trump tweets. When looking at the top 20 highest prediction scores for abortion-related tweets, 17 out of 20 were pro-Trump. When looking at the lowest 20 prediction scores, 19 out of 20 were pro-Biden. Despite the strange output of the model, it was still able to somewhat accurately classify these abortion-related tweets. 
+
+
+However, when looking at the immigration and gun control tweets, the results become more puzzling. For both of these topics, the model was not able to accurately separate the pro Trump or Biden sentiment when looking at the highest and lowest 20 prediction scores. We discuss our hypothesis for why this might be the case later in the discussion section.
+
+
+
