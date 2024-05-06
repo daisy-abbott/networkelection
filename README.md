@@ -217,3 +217,31 @@ Overall, while our project touches on the potential of machine learning in socia
 
 
 ## References: 
+
+* https://python.plainenglish.io/how-to-extract-tweets-on-a-hashtag-from-twitter-api-using-tweepy-34d697ecba21
+https://www.pewresearch.org/short-reads/2022/09/21/does-public-opinion-polling-about-issues-still-work/
+https://www.theguardian.com/us-news/2024/mar/05/2024-election-campaign-issue-tracker
+
+
+* https://www.sciencedirect.com/science/article/pii/S1877050920306669
+
+* https://github.com/mgierlach/nlp-twitter-political-sentiment-analysis
+
+* https://journalofbigdata.springeropen.com/articles/10.1186/s40537-022-00633-z
+
+* https://www.kaggle.com/datasets/manchunhui/us-election-2020-tweets
+
+* https://python.plainenglish.io/how-to-extract-tweets-on-a-hashtag-from-twitter-api-using-tweepy-34d697ecba21
+
+* https://www.diva-portal.org/smash/get/diva2:1335995/FULLTEXT02#:~:text=CNN%2DLSTM%20model%20is%20best,respect%20to%20the%20selected%20dataset.
+
+* https://www.kaggle.com/datasets/kazanova/sentiment140
+
+* https://www.kaggle.com/code/varun08/sentiment-analysis-using-word2vec
+
+* https://www.semanticscholar.org/paper/Analysis-on-Audio-and-Video-using-Vader-Algorithm-Yadav-Raskar/f3dbdee338de75106e2a765766c92f8563920f84
+
+* https://medium.com/semi-supervised-sentiment-analysis-and-language/plenty-of-advancements-happened-in-language-model-at-the-end-of-2018-with-the-arrival-of-cd0c5dc7ca57
+
+
+
